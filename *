@@ -1,0 +1,55 @@
+        int body = int.Parse(Console.ReadLine());
+       
+        int satir = (body * 2) - 1;
+
+        int i = 1;
+        while (i <= satir)
+        {
+            Console.WriteLine();
+
+            int bosluk = (satir - i) / 2;
+
+            int j = 0;
+            while (j < bosluk)
+            {
+                Console.Write(" ");
+                j++;
+            }
+
+            j = 0;
+            while (j < i)
+            {
+                Console.Write("*");
+                j++;
+            }
+
+            i += 2; 
+        }
+
+        Console.Write(body);
+
+        int trunkHeight = (satir - 1) / 2;  
+        int t = 0;
+        while (t < trunkHeight)
+        {
+            Console.WriteLine();
+
+            int boslukGovde = (satir - 3) / 2;
+            int k = 0;
+            while (k < boslukGovde)
+            {
+                Console.Write(" ");
+                k++;
+            }
+
+            int m = 0;
+            while (m < 3)
+            {
+                Console.Write("*");
+                m++;
+            }
+
+            t++;
+        }
+    }
+}
