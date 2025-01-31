@@ -1,0 +1,57 @@
+using System;
+
+namespace OrnekUygulama
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Sayı Gir: ");
+            int num = int.Parse(Console.ReadLine());
+
+            int i = 2;
+            while (i <= num)
+            {
+                bool isPrime = true;
+                int y = 2;
+                while (y < i)
+                {
+                    if (i % y == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                    y++;
+                }
+                if (isPrime) Console.Write($"{i} ");
+                i++;
+            }
+
+            Console.WriteLine();
+            Console.Write("Bir sayı girin: ");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Asal sayılar:");
+
+            i = 2;
+            while (i <= n)
+            {
+                int bolenSayisi = 0;
+                int j = 1;
+                while (j <= i)
+                {
+                    if (i % j == 0)
+                    {
+                        bolenSayisi++;
+                    }
+                    j++;
+                }
+                if (bolenSayisi == 2)
+                {
+                    Console.Write($"{i} ");
+                }
+                i++;
+            }
+        }
+    }
+}
