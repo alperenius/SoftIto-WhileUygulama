@@ -1,1 +1,0 @@
-# SoftIto-WhileUygulama
