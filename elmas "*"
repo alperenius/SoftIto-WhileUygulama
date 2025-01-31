@@ -1,0 +1,98 @@
+    int bosluk;
+    int yildiz;
+    Console.WriteLine("orta satırdaki * sayısını girin (tek sayı)");
+x:
+    int n = int.Parse(Console.ReadLine());
+    if (n % 2 == 0)
+    {
+        Console.Write("Lütfen tek sayı girin:  ");
+        goto x;
+    }
+    else
+    {
+        int i = 1;
+        while (i <= n)
+        {
+            bosluk = (n - i) / 2;
+            yildiz = i;
+
+            int j = 0;
+            while (j < bosluk)
+            {
+                Console.Write(" ");
+                j++;
+            }
+
+            j = 0;
+            while (j < yildiz)
+            {
+                Console.Write("*");
+                j++;
+            }
+
+            Console.WriteLine();
+            i += 2;
+        }
+
+        int k = n - 2;
+        while (k >= 1)
+        {
+            bosluk = (n - k) / 2;
+            yildiz = k;
+
+            int j = 0;
+            while (j < bosluk)
+            {
+                Console.Write(" ");
+                j++;
+            }
+
+            j = 0;
+            while (j < yildiz)
+            {
+                Console.Write("*");
+                j++;
+            }
+
+            Console.WriteLine();
+            k -= 2;
+        }
+    }
+
+    int a = 0;
+    while (a < 4)
+    {
+        Console.WriteLine();
+        int j = 3 - a;
+        while (j > 0)
+        {
+            Console.Write(" ");
+            j--;
+        }
+        int k = 0;
+        while (k < 2 * a + 1)
+        {
+            Console.Write("*");
+            k++;
+        }
+        a++;
+    }
+
+    a = 0;
+    while (a < 4)
+    {
+        Console.WriteLine();
+        int j = 0;
+        while (j < a + 1)
+        {
+            Console.Write(" ");
+            j++;
+        }
+        int k = 5 - (a * 2);
+        while (k > 0)
+        {
+            Console.Write("*");
+            k--;
+        }
+        a++;
+    }
